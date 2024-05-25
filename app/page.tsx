@@ -36,6 +36,24 @@ export default function IndexPage() {
       'desc': '我是柒屹，同时也是云术工作室重要成员之一，屹立不倒。从事互联网事业及Web开发工作，也在搞关于Java的一些东西'
     },
   ]
+  const serves = [
+    {
+      'name': '前端服务',
+      'content': '云术团队可以为您提供免费域名、cdn(CF)、以及虚拟主机网站服务'
+    },
+    {
+      'name': '游戏服务',
+      'content': '云术团队旗下的服务器为您提供流畅、有趣的多人游玩体验'
+    },
+    {
+      'name': '开源项目',
+      'content': '云术团队的项目均已开源在Github，所有人都可以借鉴我们的项目，但请标明出处'
+    },
+    {
+      'name': '其它服务',
+      'content': '除了上述描述的服务内容，我们还可以提供更多的服务，其中涉及到了多个领域，如有需要可自行咨询。'
+    }
+  ]
   return (
     <main>
       <section className="container grid items-center gap-5 pb-7 pt-4 md:py-10">
@@ -87,6 +105,23 @@ export default function IndexPage() {
         </AlertDescription>
       </Alert>
     </section>
+
+    <section className="container grid items-center gap-5 pb-7 pt-4 md:py-10">
+    <h1 className={cn("text-center text-3xl leading-tight tracking-widest subpixel-antialiased md:text-4xl","animate-fade-down animate-ease-in-out")} style={{ animationDelay: `${getDelay()}ms` }}>
+          团队服务
+          <p className="text-lg text-muted-foreground">我们可以为你带来这些</p>
+          </h1>
+          <div className="grid grid-cols-4 gap-5">
+          {serves.map((serve) => (
+            <Card className="animate-fade-left rounded-2xl animate-ease-in-out" style={{ animationDelay: `${getDelay()}ms` }}>
+              <CardTitle className="text-center text-2xl">
+                <br></br>{serve.name}</CardTitle>
+                <br></br>
+              <CardContent>{serve.content}</CardContent>
+            </Card>
+          ))}
+      </div>
+    </section>
     <section className="container grid items-center gap-5 pb-7 pt-4 md:py-10">
       <h1 className={cn("text-center text-3xl leading-tight tracking-widest subpixel-antialiased md:text-4xl","animate-fade-down animate-ease-in-out")} style={{ animationDelay: `${getDelay()}ms` }}>
           团队的成员们
@@ -94,9 +129,10 @@ export default function IndexPage() {
           </h1>
       <div className="grid grid-cols-4 gap-5">
           {members.map((member) => (
-            <Card className="animate-fade-left animate-ease-in-out rounded-2xl" style={{ animationDelay: `${getDelay()}ms` }}>
+            <Card className="animate-fade-left rounded-2xl animate-ease-in-out" style={{ animationDelay: `${getDelay()}ms` }}>
               <CardTitle className="text-center text-2xl"><br></br>
-                {member.name}</CardTitle>
+              <Image className="mx-auto rounded-full" src={`https://q1.qlogo.cn/g?b=qq&nk=${member.QQ}&s=640`} alt="" width={'100'} height={'100'}></Image>
+                <br></br>{member.name}</CardTitle>
                 <CardDescription className="text-center">{member.job}</CardDescription>
                 <br></br>
               <CardContent>{member.desc}</CardContent>

@@ -54,7 +54,8 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        sans: ['Montserrat Variable', 'PingFang', ...fontFamily.sans],
+        mono: [...fontFamily.mono],
       },
       keyframes: {
         "accordion-down": {
@@ -72,5 +73,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"),require('tailwindcss-animated')],
 }

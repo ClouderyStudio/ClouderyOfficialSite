@@ -9,6 +9,10 @@ export const siteConfig = {
       title: "主页",
       href: "/",
     },
+    {
+      title: "BCNS官网",
+      href: "https://mcbcc.cn",
+    }
   ],
   links: {
     github: "https://github.com/ClouderyStudio",

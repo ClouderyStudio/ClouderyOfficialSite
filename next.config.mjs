@@ -12,6 +12,12 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'api.cloudery.cn',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 }

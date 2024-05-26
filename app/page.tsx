@@ -177,7 +177,7 @@ export default function IndexPage() {
     <section className="container grid items-center gap-5 pb-7 pt-4 md:py-10">
     <h1 className={cn("text-center text-3xl leading-tight tracking-widest subpixel-antialiased md:text-4xl","animate-fade-down animate-ease-in-out")} style={{ animationDelay: `${getDelay()}ms` }}>
           团队服务
-          <p className="text-lg text-muted-foreground">我们可以为你带来这些</p>
+          <p className="text-lg text-muted-foreground">我们可以为你带来这些服务</p>
           </h1>
           <div className="grid grid-cols-4 gap-5">
           {serves.map((serve) => (

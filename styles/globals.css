@@ -1,5 +1,21 @@
 @tailwind base;
 @tailwind components;
+
+@font-face {
+  font-family: 'Rubik';
+  src: local('Rubik'),url(./Rubik.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: '方正准圆简体';
+  src: local('方正准圆简体'),url(./方正准圆简体.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: '苹方-简 常规体';
+  src: local('苹方-简 常规体'),url(./苹方-简常规体.ttf) format('ttf');
+}
+
 @tailwind utilities;
 
 @layer base {
@@ -77,5 +93,6 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: 'Rubik', 'PingFangSC', 'Microsoft YaHei UI', sans-serif;
   }
 }
